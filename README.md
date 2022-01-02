@@ -1,6 +1,8 @@
 # ROBLOX AChassis Sound Patch
 #### This prevents non-drivers from changing sounds for a vehicle.
 
+###### Source from Handler in:
+###### /Car Model/A-Chassis Tune/Plugins/A6_Stock_Sound/AC6_FE_Sounds/Handler
 ```lua
 local car = script.Parent.Parent
 local Sounds = {}
