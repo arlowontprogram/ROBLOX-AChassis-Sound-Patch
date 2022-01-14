@@ -24,6 +24,11 @@ F.newSound = function(name,par,id,pitch,volume,loop)
 end
 
 F.updateSound = function(sound,id,pit,vol)
+	-- add volume checks, like so
+	--[[
+	volume = math.clamp(volume, 0, 1)
+	pitch = math.clamp(pitch, 0, 1)
+	]]
 	local sn = Sounds[sound]
 	if id~=sn.SoundId then sn.SoundId = id end
 	if pit~=sn.Pitch then sn.Pitch = pit end
