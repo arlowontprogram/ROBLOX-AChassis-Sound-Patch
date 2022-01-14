@@ -9,6 +9,11 @@ local Sounds = {}
 local F = {}
 
 F.newSound = function(name,par,id,pitch,volume,loop)
+	-- add volume checks, like so
+	--[[
+	volume = math.clamp(volume, 0, 1)
+	pitch = math.clamp(pitch, 0, 1)
+	]]
 	for i,v in pairs(Sounds) do
 		if i==name then
 			v:Stop()
@@ -25,6 +30,11 @@ F.newSound = function(name,par,id,pitch,volume,loop)
 end
 
 F.updateSound = function(sound,id,pit,vol)
+	-- add volume checks, like so
+	--[[
+	volume = math.clamp(volume, 0, 1)
+	pitch = math.clamp(pitch, 0, 1)
+	]]
 	local sn = Sounds[sound]
 	if id~=sn.SoundId then sn.SoundId = id end
 	if pit~=sn.Pitch then sn.Pitch = pit end
@@ -54,7 +64,7 @@ script.Parent.OnServerEvent:connect(function(pl,Fnc,...)
 		F[Fnc](...)
 	else
 		warn(pl.Name .. " has been sus by activating sounds when not driving :thinking:")
-                -- do stuff
+    -- do stuff
 	end
 end)
 
