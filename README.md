@@ -1,6 +1,8 @@
 # ROBLOX AChassis Sound Patch
 #### This prevents non-drivers from changing sounds for a vehicle.
 
+> :warning: this is HEAVILY unoptimised, expect lagging while a user is driving a vehicle
+
 ###### Source from Handler in:
 ###### /Car Model/A-Chassis Tune/Plugins/A6_Stock_Sound/AC6_FE_Sounds/Handler
 ```lua
